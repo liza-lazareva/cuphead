@@ -6,6 +6,10 @@ header {
     cursor: url(/images/cursor.jpg);
   }
   
+/* .header_block{
+  position: relative;
+} */
+
   .logo-image {
     padding-top: 20px;
     width: 3rem;
@@ -109,12 +113,29 @@ header {
   #overlay a:hover {
     opacity: 1;
   }
+
+.maname{
+  font-size: 15px;
+  bottom: 5%;
+  position: absolute;
+  color: var(--main-dark-color);
+}
+
   /* header style end */
   
+
+  @media (max-width: 1920px) {
+    .maname{
+      font-size: 25px;
+    }
+  }
 
   @media (max-width: 1600px) {
     .logo-image {
       width: 3.3rem;
+    }
+    .maname{
+      font-size: 20px;
     }
   }
 
@@ -124,6 +145,9 @@ header {
     }
     .logo-image {
       width: 3rem;
+    }
+    .maname{
+      font-size: 18px;
     }
   }
 
@@ -136,6 +160,9 @@ header {
   @media (max-width: 768px) {
     #overlay a {
       font-size: clamp(1rem, 6.5vw + 0.2rem, 10rem);
+    }
+    .maname{
+      font-size: 20px;
     }
   }
 

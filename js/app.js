@@ -9,69 +9,80 @@ function parallax(e){
     layer.style.transform = `translateX(${x}px) translateY(${y}px)`
   });
 }
+
+document.addEventListener("mousemove", parallax2);
+function parallax2(e){
+  this.querySelectorAll(".stickEyes").forEach((stickEyes) => {
+    const speed = stickEyes.getAttribute("data-speed");
+    const x = (window.innerWidth + e.pageX * speed) / 150;
+    const y = (window.innerHeight + e.pageY * speed) / 150;
+
+    stickEyes.style.transform = `translateX(${x}px) translateY(${y}px)`
+  });
+}
 //404 parallax header end
 
+/*
+image scrolltrigger start 
+const canvas = document.querySelector(".canvas");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-// image scrolltrigger start 
-// const canvas = document.querySelector(".canvas");
-// canvas.width = window.innerWidth;
-// canvas.height = window.innerHeight;
+const context = canvas.getContext("2d");
+const frameCount = 30;
 
-// const context = canvas.getContext("2d");
-// const frameCount = 30;
+const currentFrame = (index) => `./images/cupheadIntroGallery/${(index + 1).toString()}.jpg`;
 
-// const currentFrame = (index) => `./images/cupheadIntroGallery/${(index + 1).toString()}.jpg`;
+const images = [];
+let PIC = { frame: 0 };
 
-// const images = [];
-// let PIC = { frame: 0 };
+for (let i = 0; i < frameCount; i++) {
+  const img = new Image();
+  img.src = currentFrame(i);
+  console.log(currentFrame(i));
+  images.push(img);
+}
 
-// for (let i = 0; i < frameCount; i++) {
-//   const img = new Image();
-//   img.src = currentFrame(i);
-//   console.log(currentFrame(i));
-//   images.push(img);
-// }
+gsap.to(PIC, {
+  frame: frameCount - 1,
+  snap: "frame",
+  ease: "none",
+  scrollTrigger: {
+    scrub: 0.5,
+    pin: "canvas",
+    end: "500%",
+  },
+  onUpdate: render,
+});
 
-// gsap.to(PIC, {
-//   frame: frameCount - 1,
-//   snap: "frame",
-//   ease: "none",
-//   scrollTrigger: {
-//     scrub: 0.5,
-//     pin: "canvas",
-//     end: "500%",
-//   },
-//   onUpdate: render,
-// });
+gsap.fromTo(
+  ".about_text",
+  {
+    opacity: 0,
+  },
+  {
+    opacity: 1,
+    scrollTrigger: {
+      scrub: 1,
 
-// gsap.fromTo(
-//   ".about_text",
-//   {
-//     opacity: 0,
-//   },
-//   {
-//     opacity: 1,
-//     scrollTrigger: {
-//       scrub: 1,
+      start: "50%",
+      end: "55%",
+    },
+    onComplete: () => {
+      gsap.to(".about_text", { opacity: 0 });
+    },
+  }
+);
 
-//       start: "50%",
-//       end: "55%",
-//     },
-//     onComplete: () => {
-//       gsap.to(".about_text", { opacity: 0 });
-//     },
-//   }
-// );
+images[0].onload = render;
 
-// images[0].onload = render;
+function render() {
+  context.canvas.width = images[0].width;
+  context.canvas.height = images[0].height;
 
-// function render() {
-//   context.canvas.width = images[0].width;
-//   context.canvas.height = images[0].height;
-
-//   context.clearRect(0, 0, canvas.width, canvas.height);
-//   context.drawImage(images[PIC.frame], 0, 0);
-// }
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  context.drawImage(images[PIC.frame], 0, 0);
+}*/
 // image scrolltrigger end 
 
 
