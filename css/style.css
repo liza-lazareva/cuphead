@@ -1,0 +1,585 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Object Sans';
+    font-weight: normal;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    color: var(--main-light-color);
+    background-color: #000;
+  }
+.header_block{
+  z-index: 10;
+}
+.main{
+    align-items: center;
+    z-index: 1;
+    background-image: url(/images/mainBg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+  .main_content{
+    position:relative;
+    margin: 0 auto;
+    padding-top: 160px;
+    height: 100vh;
+    /* margin-top: 140px; */
+    text-align: center;
+    align-items: center;
+  }
+
+  .mainTitles{
+    position: relative;
+  }
+  .mainTitle1,.mainTitle2,  .mainTitle3{
+    opacity: 0;
+    animation-name: show;
+    animation-duration: 5s; 
+    animation-fill-mode: forwards;
+  }
+  
+  .mainTitle1{
+    font-family: 'Cuphead Memphis';
+    font-size: 30px; 
+  }
+  .mainTitle2{
+  font-family: 'Alegreya SC';
+    font-weight: bold;
+    font-style: italic;
+    font-size: 100px;
+    margin-top: 10px;
+  }
+
+  .mainTitleGal{
+    font-family: 'Cuphead Memphis';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal; 
+    font-size: 60px; 
+    align-items: center;
+    padding-bottom: 30px;
+
+}
+
+  .mainTitle3{
+    font-family: 'Cuphead Memphis';
+    color: var(--main-bright-color);
+    font-size: 18px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  justify-content: center;
+    position: absolute;
+    bottom: 7%;
+    width: 100%;
+  }
+
+  .cartoonInfo{
+    padding: 0 200px;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+	  font-size: 0;
+    margin-top: 80px;
+    animation-name: show;
+    animation-duration: 8s; 
+    transform: translateY(-10%);
+    animation-fill-mode: forwards;
+  }
+
+  .info_item {
+    white-space: normal;	
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    color: var(--main-light-color);
+    /* margin-right: 5%; */
+    font-size: 14px;
+  }
+  /* .cartoonInfo .info_item:last-child {
+    margin-right: 0 ;
+  } */
+
+  .info_item_title{
+    font-family: 'AlegreyaSans SC';
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .info_item_content{
+    font-family: 'AlegreyaSans SC';
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+  }
+
+  @keyframes show {
+    from {opacity: 0;} 
+    to {opacity: 1;
+      transform: translateY(0);}
+    }
+
+/* image anim */
+/* canvas {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+} */
+.about_text{
+    color: var(--main-light-color);
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Cuphead Memphis';
+    margin: 0 auto;
+    font-size: 30px;
+    padding-top: 270px;
+}
+
+.section_block{
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+} 
+
+.secondSect{
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+  background-image: url(/images/try1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.stickEyes{
+  position: relative;
+  transform: translate(-0%, 0%);
+  /* background-position: center; */
+  top: -60%;
+  left: -30%;
+  right: 900%;
+  width: 200%;
+
+}
+
+.thirdSect{
+  position: relative;
+  padding-top: 60px;
+  /* background-color: var(--main-dark-color); */
+  /* margin-top: 100px; */
+}
+
+
+.trailer_vid{
+  z-index: 10;
+  height: 80vh;
+  border-radius: 20px;
+}
+
+.video_title{
+  font-family: 'Cuphead Memphis';
+  font-size: 20px;
+}
+
+.video_gallery_wrapper{
+  white-space: nowrap;
+  display: flex;
+}
+
+.video_gallery{
+  vertical-align: middle;
+  display: flex;
+  margin: 0 auto; 
+}
+
+.video_item {
+  white-space: normal;	
+}
+
+.site_content_container{
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.section_block {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+
+.about_game_wrapper{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.about_game_info{
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  background-color: var(--main-bright-color);
+}
+
+.about_game_title{
+  font-family: 'Cuphead Memphis';
+  font-size: 30px;
+  margin-top: 100px;
+}
+
+.about_game_text{
+  font-family: 'Object Sans';
+  font-size: 18px;
+  margin-top: 100px;
+  line-height: 1.2;
+}
+
+.about_game_img_wrapper{
+  width: 50%;
+  background-image: url(/images/aboutGame.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.game_page_arrow_link{
+  background-color: var(--main-dark-color);
+  width: 15%;
+}
+
+.button_style{
+  /* position: absolute; */
+  bottom: 0;
+  text-align: center;
+  padding: 20px 100px;
+  margin-top: 200px;
+  font-size: 20px;
+  font-family: 'Cuphead Memphis';
+  background-color: var(--main-light-color);
+  color: var(--main-bright-color);
+}
+
+.button_style:hover{
+  background-color: var(--main-bright-color);
+  color: var(--main-light-color);
+  border: 2px solid var(--main-light-color);
+}
+
+.fifthSec{
+  position: relative;
+  background-color: var(--main-light-color);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+}
+
+.frame_block_title{
+  position: relative;
+  font-family: 'Cuphead Memphis';
+  font-size: 100px;
+  color: var(--main-bright-color);
+  margin: 0 auto; 
+  margin-top: 250px;
+}
+
+/* pics frame block start */
+.pic1{
+  position: absolute;
+  top: 10%;
+  left: 0%;
+  transform: translate(-0%, 0%);
+  width: 15%;
+}
+.colorCirc8{
+  position: absolute;
+  top: -15%;
+  left: -10%;
+  transform: translate(-0%, 0%);
+  width: 15%;
+}
+.colorCirc1{
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  transform: translate(-0%, 0%);
+  width: 3%;
+}
+.pic2{
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  transform: translate(-0%, 0%);
+  width: 8%;
+}
+.colorCirc2{
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  transform: translate(-0%, 0%);
+  width: 7%;
+}
+.pic3{
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translate(-0%, 0%);
+  width: 6%;
+}
+.colorCirc3{
+  position: absolute;
+  bottom: 30%;
+  left: 25%;
+  transform: translate(-0%, 0%);
+  width: 3%;
+}
+.pic4{
+  position: absolute;
+  bottom: 20%;
+  left: 35%;
+  transform: translate(-0%, 0%);
+  width: 10%;
+}
+.pic5{
+  position: absolute;
+  top: 15%;
+  right: 0%;
+  transform: translate(-0%, 0%);
+  width: 10%;
+}
+.colorCirc7{
+  position: absolute;
+  top: -10%;
+  right: 0%;
+  transform: translate(-0%, 0%);
+  width: 10%;
+}
+
+.pic6{
+  position: absolute;
+  bottom: 5%;
+  right: 10%;
+  transform: translate(-0%, 0%);
+  width: 15%;
+}
+.pic7{
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  transform: translate(-0%, 0%);
+  width: 8%;
+}
+.colorCirc4{
+  position: absolute;
+  top: 30%;
+  right: 20%;
+  transform: translate(-0%, 0%);
+  width: 3%;
+}
+.colorCirc5{
+  position: absolute;
+  bottom: 20%;
+  right: 35%;
+  transform: translate(-0%, 0%);
+  width: 7%;
+}
+.colorCirc6{
+  position: absolute;
+  top: 10%;
+  right: 45%;
+  transform: translate(-0%, 0%);
+  width: 5%;
+}
+/* pics frame block start */
+
+.frameLink{
+  text-decoration: none;
+  color: var(--main-bright-color);
+}
+
+/*---------------------------------------------*/
+@media (max-width: 1920px) {
+  .mainTitle1{
+    font-size: 40px;
+  }
+  .mainTitle2{
+    font-size: 130px;
+  }
+  .main_content {
+    padding-top: 260px;
+  }
+  .info_item_title {
+    margin-top: 100px;
+  }
+  .info_item_title {
+    font-size: 30px;
+  }
+
+}
+
+@media (max-width: 1632px) {
+  .main_content {
+    padding-top:  160px;
+  }
+  .mainTitle1{
+    font-size: 30px;
+  }
+  .mainTitle2{
+    font-size: 100px;
+  }
+  .info_item_title {
+    font-size: 20px;
+  }
+}
+
+
+@media (max-width: 1400px) {
+  .stickEyes{
+    display: none;
+  }
+  .frame_block_title{
+    margin-top: 300px;
+  }
+  .colorCirc8 {
+    width: 20%;
+  }
+  .colorCirc7{
+    width: 15%;
+  }
+  .colorCirc2{
+    width: 10%;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .mainTitle2{
+    font-size: 90px;
+  }
+  .cartoonInfo{
+    margin-top: 100px;
+  }
+  .trailer_vid{
+    width: 100%;
+  }
+   
+}
+
+@media (max-width: 1000px) {
+  .mainTitle2{
+    font-size: 70px;
+  }
+  .cartoonInfo{
+    padding: 0 130px;
+  } 
+  .about_text{
+    font-size: 25px;
+    padding-top: 330px;
+  }
+}
+
+@media (max-width: 850px) {
+  .about_game_title{
+    font-size: 25px;
+  }
+  .game_page_arrow_link{
+    width: 0%;
+  }
+  .about_game_img_wrapper{
+    width: 65%;
+  }
+  .about_game_info{
+    width: 100%;
+  }
+  .about_game_img_wrapper{
+    background-position: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainTitle2{
+    font-size: 60px;
+  }
+  .cartoonInfo{
+    padding: 0 100px;
+  } 
+  .mainTitle3{
+    
+  }
+  .info_item_content{
+    font-size: 18px;
+  }
+  .about_text{
+    font-size: 20px;
+    padding-top: 330px;
+  }
+  .about_game_info{
+    width: 100%;
+  }
+  .colorCirc8 {
+    width: 20%;
+    top: -5%;
+  }
+  .colorCirc7{
+    width: 15%;
+    right: 3%;
+    top: -5%;
+  }
+  .pic7{
+    width: 15%;
+  }
+  .pic6{
+    width: 20%;
+  }
+  .pic2{
+    display: none;
+  }
+  .frame_block_title{
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 650px) {
+  .cartoonInfo{
+    display: none;
+  }
+  .about_text{
+    font-size: 18px;
+    padding-top: 330px;
+  }
+  .about_game_info{
+    width: 100%;
+  }
+  .pic4{
+    width: 30%;
+    left: 20%;
+  }
+  .pic5{
+    width: 30%;
+  }
+  .colorCirc7{
+    width: 20%;
+  }
+  .main_content{
+    padding-top: 300px;
+  }
+  
+}
+
+@media (max-width: 480px) {
+.about_game_img_wrapper{
+  width: 0%;
+}
+
+.frame_block_title{
+  font-size: 70px;
+}
+
+}

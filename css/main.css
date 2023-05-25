@@ -1,0 +1,62 @@
+:root{
+    --main-light-color: #FFF2E3;
+    --main-dark-color: #282520;
+    --main-bright-color: #D86050;
+  }
+
+/* @font-face {
+  font-family: 'Cuphead Memphis';
+  src: url('../fonts/cupheadmemphis_medium.ttf') format("ttf");
+  font-weight: normal;
+} */
+@font-face {
+  font-family: 'Cuphead Memphis';
+  src: url('../fonts/font.ttf') format("otf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Alegreya SC';
+  src: url('../fonts/AlegreyaSC-BoldItalic.ttf') format("ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'AlegreyaSans SC';
+  src: url('../fonts/AlegreyaSC-Regular.ttf') format("ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Object Sans';
+  src: url('../fonts/ObjectSans-Heavy.otf') format("otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Object Sans';
+  src: url('../fonts/ObjectSans-Regular.otf') format("otf");
+  font-weight: normal;
+}
+
+body{
+  font-family: 'Object Sans';
+  font-weight: normal;
+}
+
+.site_container{
+  width: 100%;
+  padding: 0 20px;
+}
+/* 
+  .tracker {
+    position: fixed;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 1px solid #d8d8d8;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    opacity: 0;
+    transition: top 0.075s, left 0.075s, opacity 0.5s;
+  } */
+

@@ -1,0 +1,152 @@
+body {
+    background-color: var(--main-light-color);
+    color: var(--main-dark-color);
+  }
+  
+  #hamburger div:after,
+  #hamburger div:before {
+    background-color: var(--main-dark-color);
+  }
+  .container {
+    padding-top: 100px;
+    position: relative;
+  }
+
+  .mainTitleGal{
+    font-family: 'Cuphead Memphis';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal; 
+    font-size: 60px; 
+    align-items: center;
+    padding-bottom: 30px;
+
+}
+
+  .line {
+    height: 3px;
+    background-color: var(--main-bright-color);
+    z-index: 1;
+    transform-origin: left top;
+  }
+
+  .mainTitleGal{
+    padding-bottom: 30px;
+  }
+
+  .question{
+    font-size: 30px;
+    font-family: 'Cuphead Memphis';
+    padding-bottom: 5px;
+  }
+
+  
+  .answer{
+    font-size: 18px;
+    font-family: 'Object Sans';
+    max-width: 500px;
+  }
+
+  .answer_wrapper{
+    display: flex;
+    margin-top: 5%;
+    flex-direction: row;
+    justify-content: space-between;
+   
+  }
+  
+  .ans_gif{
+    border-radius: 50px;
+    width: 100%;
+    /* padding: 0 30px; */
+
+  }
+
+  .work-items{
+   margin-bottom: 100px;
+  }
+
+  .last_ans{
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: 1920px) {
+    .question{
+        font-size: 35px;
+    }
+    .answer{
+        font-size: 30px;
+        max-width: 800px;
+    }
+  }
+  
+
+  @media (max-width: 1632px) {
+    .question{
+        font-size: 30px;
+    }
+      .answer{
+        font-size: 18px;
+      }
+  }
+
+  @media (max-width: 1400px) {
+    .mainTitleGal{
+        font-size: 50px;
+    }
+    .question{
+        font-size: 30px;
+    }
+    .answer{
+        max-width: 600px;
+    }
+  }
+  
+  
+  @media (max-width: 1000px) {
+    .mainTitleGal{
+        font-size: 45px;
+    }
+    .question{
+        font-size: 25px;
+    }
+    .answer{
+        font-size: 20px;
+        max-width: 500px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .mainTitleGal{
+        font-size: 40px;
+    }
+    .question{
+        font-size: 20px;
+    }
+    .answer{
+        font-size: 15px;
+        max-width: 300px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .answer_wrapper{
+        display: flex;
+        margin-top: 5%;
+        flex-direction: column;
+    }
+    .mainTitleGal{
+        font-size: 40px;
+    }
+    .question{
+        font-size: 20px;
+    }
+    .answer{
+        font-size: 15px;
+        max-width: 300px;
+    }
+    .ans_gif{
+        margin-top: 20px;
+    }
+  }
